@@ -1,0 +1,310 @@
+{
+    "docs": [
+        {
+            "_id": "NetlabCropType:Apple",
+            "containerType": "NetlabContainerType:Tray",
+            "$type": "NetlabCropType",
+            "name": "Apple"
+        },
+        {
+            "_id": "NetlabContainerType:Tray",
+            "$type": "NetlabContainerType",
+            "cropTypes": [
+              {
+                "cropType": "NetlabCropType:Kiwifruit",
+                "itemCount": 30
+              },
+              {
+                "cropType": "NetlabCropType:Avocado",
+                "itemCount": 20
+              },
+              {
+                "cropType": "NetlabCropType:Apple",
+                "itemCount": 20
+              }
+            ],
+            "name": "Tray"
+          },
+        {
+            "_id": "NetlabVariety:GenericApple",
+            "updated": "2016-02-16T03:19:36.975Z",
+            "name": "GenericApple",
+            "tolerances": [],
+            "created": "2016-02-11T22:48:57.432Z",
+            "$type": "NetlabVariety",
+            "cropType": "NetlabCropType:Apple",
+            "createdBy": 26,
+            "updatedBy": 26,
+            "release": {
+              "version": "0.0.440",
+              "build": "0.0.210"
+            },
+            "shortName": "GAP"
+          },
+        {
+            "_id": "NetlabTestType:NetlabCropType:Apple:Sample Login",
+            "cropType": "NetlabCropType:Apple",
+            "itemCount": null,
+            "displayName": "Sample Login",
+            "name": "Sample Login",
+            "$type": "NetlabTestType",
+            "$state": "SampleLogin",
+            "abbreviation": "",
+            "order": 0,
+            "varieties": [
+              "NetlabVariety:GenericApple"
+            ]
+        },
+        {
+            "_id": "NetlabTestType:NetlabCropType:Apple:Fresh Weight",
+            "cropType": "NetlabCropType:Apple",
+            "itemCount": null,
+            "displayName": "Fresh Weight",
+            "varieties": [             "NetlabVariety:GenericApple"           ],
+            "$type": "NetlabTestType",
+            "$state": "FreshWeight",
+            "abbreviation": "WT",
+            "deviceType": "Scale",
+            "order": 2,
+            "name": "Fresh Weight"
+        },
+        {
+            "_id": "NetlabTestType:NetlabCropType:Apple:Dry In",
+            "cropType": "NetlabCropType:Apple",
+            "itemCount": null,
+            "displayName": "Dry In",
+            "varieties": [             "NetlabVariety:GenericApple"           ],
+            "$type": "NetlabTestType",
+            "$state": "DryIn",
+            "abbreviation": "DM",
+            "deviceType": "Scale",
+            "order": 3,
+            "name": "Dry In"
+        },
+        {
+            "_id": "NetlabTestType:NetlabCropType:Apple:Dry Out",
+            "cropType": "NetlabCropType:Apple",
+            "itemCount": null,
+            "displayName": "Dry Out",
+            "varieties": [             "NetlabVariety:GenericApple"           ],
+            "$type": "NetlabTestType",
+            "$state": "DryOut",
+            "abbreviation": "DM",
+            "deviceType": "Scale",
+            "order": 4,
+            "name": "Dry Out"
+        },
+        {
+            "_id": "NetlabTestType:NetlabCropType:Apple:Pressure",
+            "cropType": "NetlabCropType:Apple",
+            "itemCount": null,
+            "displayName": "Pressure Single",
+            "varieties": [             "NetlabVariety:GenericApple"           ],
+            "$type": "NetlabTestType",
+            "$state": "Pressure",
+            "abbreviation": "Pres",
+            "deviceType": "Penetrometer",
+            "order": 5,
+            "name": "Pressure"
+        },
+        {
+            "_id": "NetlabTestType:NetlabCropType:Apple:Brix Equatorial",
+            "cropType": "NetlabCropType:Apple",
+            "itemCount": null,
+            "displayName": "Brix Equatorial",
+            "varieties": [             "NetlabVariety:GenericApple"           ],
+            "$type": "NetlabTestType",
+            "$state": "Brix",
+            "abbreviation": "BEq",
+            "deviceType": "Refractometer",
+            "order": 6,
+            "name": "Brix Equatorial"
+        },
+        {
+            "_id": "NetlabTestType:NetlabCropType:Apple:Starch",
+            "cropType": "NetlabCropType:Apple",
+            "itemCount": null,
+            "displayName": "Starch",
+            "varieties": [             "NetlabVariety:GenericApple"           ],
+            "$type": "NetlabTestType",
+            "$state": "Starch",
+            "abbreviation": "St",
+            "order": 7,
+            "name": "Starch"
+        },
+        {
+            "_id": "NetlabTestType:NetlabCropType:Apple:Blush",
+            "cropType": "NetlabCropType:Apple",
+            "itemCount": null,
+            "displayName": "Blush",
+            "varieties": [             "NetlabVariety:GenericApple"           ],
+            "$type": "NetlabTestType",
+            "$state": "Blush",
+            "abbreviation": "Bl",
+            "order": 7,
+            "name": "Blush"
+        },
+        {
+          "_id": "NetlabValidationType:ZeroOrOneDecimal",
+          "function": "function lt(values, data, scope){ return RegExp('^\\d+(\\.\\d{1,1})?$').test(data); }",
+          "$type": "NetlabValidationType",
+          "name": "ZeroOrOneDecimal"
+        },
+        {
+          "_id": "NetlabValidationRule:STARCH_MIN",
+          "before": [
+          ],
+          "afterPass": [],
+          "afterFail": ["NetlabPopup:Invalid Measure"],
+          "$type": "NetlabValidationRule",
+          "release": {
+            "version": "0.0.0",
+            "build": "DEV"
+          },
+          "workstation": {
+            "lab": "EFK"
+          },
+          "name": "STARCH_MIN",
+          "position": "NetlabValidationPosition:StarchValue",
+          "validationType": "NetlabValidationType:Greater Than",
+          "values": [
+            "0"
+          ],
+          "cropType": "NetlabCropType:Apple",
+          "variety": "NetlabVariety:GenericApple",
+          "testType": "NetlabTestType:NetlabCropType:Apple:Starch",
+          "sampleType": null,
+          "created": "2019-08-01T00:16:12.671Z",
+          "updated": "2019-08-01T00:16:12.671Z",
+          "updatedBy": 1,
+          "createdBy": 1,
+          "updated_legacy_staff_type_id": null,
+          "created_legacy_staff_type_id": null
+        },
+        {
+          "_id": "NetlabValidationRule:STARCH_MAX",
+          "before": [
+            
+          ],
+          "afterPass": [],
+          "afterFail": ["NetlabPopup:Invalid Measure"],
+          "$type": "NetlabValidationRule",
+          "release": {
+            "version": "0.0.0",
+            "build": "DEV"
+          },
+          "workstation": {
+            "lab": "EFK"
+          },
+          "name": "STARCH_MAX",
+          "position": "NetlabValidationPosition:StarchValue",
+          "validationType": "NetlabValidationType:Less Than",
+          "values": [
+            "10.1"
+          ],
+          "cropType": "NetlabCropType:Apple",
+          "variety": "NetlabVariety:GenericApple",
+          "testType": "NetlabTestType:NetlabCropType:Apple:Starch",
+          "sampleType": null,
+          "created": "2019-08-01T00:16:12.671Z",
+          "updated": "2019-08-01T00:16:12.671Z",
+          "updatedBy": 1,
+          "createdBy": 1,
+          "updated_legacy_staff_type_id": null,
+          "created_legacy_staff_type_id": null
+        },
+        {
+          "_id": "NetlabValidationRule:STARCH_DECIMAL",
+          "before": [
+          ],
+          "afterPass": [],
+          "afterFail": ["NetlabPopup:Invalid Measure"],
+          "$type": "NetlabValidationRule",
+          "release": {
+            "version": "0.0.0",
+            "build": "DEV"
+          },
+          "workstation": {
+            "lab": "EFK"
+          },
+          "name": "STARCH_DECIMAL",
+          "position": "NetlabValidationPosition:StarchValue",
+          "validationType": "NetlabValidationType:ZeroOrOneDecimal",
+          "values": [
+          ],
+          "cropType": "NetlabCropType:Apple",
+          "variety": "NetlabVariety:GenericApple",
+          "testType": "NetlabTestType:NetlabCropType:Apple:Starch",
+          "sampleType": null,
+          "created": "2019-08-01T00:16:12.671Z",
+          "updated": "2019-08-01T00:16:12.671Z",
+          "updatedBy": 1,
+          "createdBy": 1,
+          "updated_legacy_staff_type_id": null,
+          "created_legacy_staff_type_id": null
+        },
+        {
+          "_id": "NetlabValidationRule:BLUSH_MIN",
+          "before": [
+          ],
+          "afterPass": [],
+          "afterFail": ["NetlabPopup:Invalid Measure"],
+          "$type": "NetlabValidationRule",
+          "release": {
+            "version": "0.0.0",
+            "build": "DEV"
+          },
+          "workstation": {
+            "lab": "EFK"
+          },
+          "name": "BLUSH_MIN",
+          "position": "NetlabValidationPosition:BlushValue",
+          "validationType": "NetlabValidationType:Greater Than",
+          "values": [
+            "0"
+          ],
+          "cropType": "NetlabCropType:Apple",
+          "variety": "NetlabVariety:GenericApple",
+          "testType": "NetlabTestType:NetlabCropType:Apple:Blush",
+          "sampleType": null,
+          "created": "2019-08-01T00:16:12.671Z",
+          "updated": "2019-08-01T00:16:12.671Z",
+          "updatedBy": 1,
+          "createdBy": 1,
+          "updated_legacy_staff_type_id": null,
+          "created_legacy_staff_type_id": null
+        },
+        {
+          "_id": "NetlabValidationRule:BLUSH_MAX",
+          "before": [
+            
+          ],
+          "afterPass": [],
+          "afterFail": ["NetlabPopup:Invalid Measure"],
+          "$type": "NetlabValidationRule",
+          "release": {
+            "version": "0.0.0",
+            "build": "DEV"
+          },
+          "workstation": {
+            "lab": "EFK"
+          },
+          "name": "BLUSH_MAX",
+          "position": "NetlabValidationPosition:BlushValue",
+          "validationType": "NetlabValidationType:Less Than",
+          "values": [
+            "101"
+          ],
+          "cropType": "NetlabCropType:Apple",
+          "variety": "NetlabVariety:GenericApple",
+          "testType": "NetlabTestType:NetlabCropType:Apple:Blush",
+          "sampleType": null,
+          "created": "2019-08-01T00:16:12.671Z",
+          "updated": "2019-08-01T00:16:12.671Z",
+          "updatedBy": 1,
+          "createdBy": 1,
+          "updated_legacy_staff_type_id": null,
+          "created_legacy_staff_type_id": null
+        }
+    ]
+}

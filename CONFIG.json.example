@@ -1,0 +1,19 @@
+{"Configuration":{
+  "CouchIP":"CouchIP",
+  "CouchPort":"CouchPort",
+  "Lab":"Lab",
+  "Packhouse":"Packhouse",
+  "ESB":"ESBURL",
+  "StaffPort":"StaffPort",
+  "SamplePort":"SamplePort",
+  "SamplerPort":"SamplerPort",
+  "ContainerPort":"ContainerPort",
+  "Rabbit":"Rabbit",
+  "RabbitPort":"RabbitPort",
+  "Database":"Database",
+  "CropSeason":{
+    "Kiwifruit":"Kiwifruit",
+    "Avocado":"Avocado"
+  }
+}}
+ 

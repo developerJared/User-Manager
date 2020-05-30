@@ -1,0 +1,29 @@
+{
+    "_id": "NetlabSample:2067232",
+    "name": "2067232",
+    "itemCount": 50,
+    "itemCollectCount": 50,
+    "cropType": "NetlabCropType:Apple",
+    "variety": "NetlabVariety:GenericApple",
+    "varietyCode": "GAP",
+    "area": "NetlabArea:Katikati",
+    "containerType": "NetlabContainerType:Tray",
+    "status": "Created",
+    "sampleSource": "1001",
+    "operating_season": 2019,
+    "comments": null,
+    "sampleType": "NetlabSampleType:NetlabCropType:Apple:CA",
+    "$type": "NetlabSample",
+    "testTypes": [
+        "NetlabTestType:NetlabCropType:Apple:Dry In",
+        "NetlabTestType:NetlabCropType:Apple:Dry Out",
+        "NetlabTestType:NetlabCropType:Apple:Fresh Weight",
+        "NetlabTestType:NetlabCropType:Apple:Brix Equatorial",
+        "NetlabTestType:NetlabCropType:Apple:Pressure",
+        "NetlabTestType:NetlabCropType:Apple:Starch",
+        "NetlabTestType:NetlabCropType:Apple:Blush"
+    ],
+    "legacy": {
+        
+    }
+}

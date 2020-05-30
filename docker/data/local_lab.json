@@ -1,0 +1,798 @@
+
+{
+
+    "_id": "NetlabLab:Local",
+    "name": "Local",
+    "nfcEnabled": false,
+    "auditWeightTolerance": 1,
+    "labCoID": "EFT",
+    "created_legacy_staff_type_id": "JRC",
+    "defectsOrder": {
+        "NetlabTestType:NetlabCropType:Kiwifruit:External Defects": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Internal Defects": false
+    },
+    "checkContainerOrder": true,
+    "editSampleSupervisorPin": false,
+    "enforceTestOrder": true,
+    "updatedBy": 327,
+    "updated": "2018-11-15T03:31:18.802Z",
+    "userGuidedText": {
+        "NetlabTestType:NetlabCropType:Kiwifruit:Pressure Double": {
+            "PressureFlat": "Slice 1: Press foot pedal to capture pressure reading",
+            "PressureSide": "Slice 2: Press foot pedal to capture pressure reading"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Colour": {
+            "Colour": "Press trigger on device to capture Hue value"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Bulk Weight": {
+            "Operator": "Select bulk weight operator",
+            "NumberOfFruitUndersized": "Enter the number of underized fruit",
+            "Notes": "Enter bulk weight notes",
+            "Weight": "Enter the bulk weight(Kg)",
+            "NumberOfFruit": "Enter the number of fruit collected"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix": {
+            "Brix": "Press START on device to capture brix measure"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Double": {
+            "BrixStem": "Press START on device to capture stem brix",
+            "BrixBlossom": "Press START on device to capture blossom brix"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Dry In": {
+            "BoatWeight": "Weighing boat",
+            "Barcode": "Scan new boat number",
+            "CombinedWeight": "Place slice on boat to capture boat wet weight"
+        },
+        "NetlabTestType:NetlabCropType:Avocado:Dry Out": {
+            "Barcode": "Scan boat",
+            "Weight": "Weighing boat"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Fresh Weight": {
+            "Weight": "Press SPACE or ENTER to weigh fruit"
+        },
+        "ContainersPage": {
+            "Barcode": "Please press enter to continue"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Seeds": {
+            "Item": "Enter fruit number to change seeds value",
+            "Barcode": "Scan barcode to change seeds value"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Pressure": {
+            "Pressure": "Press foot pedal to capture pressure reading"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Colour Double": {
+            "ColourFlat": "Slice 1: Press trigger on device to capture Hue value",
+            "ColourSide": "Slice 2: Press trigger on device to capture Hue value"
+        },
+        "NetlabTestType:NetlabCropType:Avocado:Dry In": {
+            "BoatWeight": "",
+            "Barcode": "Scan boat",
+            "SeedCoat": "Select seed coat maturity",
+            "CombinedWeight": "Press ENTER to capture boat wet weight when at least 32g is registered on the scales"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:External Defects": {
+            "Item": "Enter fruit number and press ENTER",
+            "Defect": "Enter defect code and press ENTER"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Internal Defects": {
+            "Item": "Enter fruit number and press ENTER",
+            "Defect": "Enter defect code and press ENTER"
+        },
+        "NetlabTestType:NetlabCropType:Avocado:Bulk Weight": {
+            "Operator": "Select bulk weight operator",
+            "NumberOfFruitUndersized": "Enter the number of underized fruit",
+            "Notes": "Enter bulk weight notes",
+            "Weight": "Enter the bulk weight(Kg)",
+            "NumberOfFruit": "Enter the number of fruit collected"
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Dry Out": {
+            "Barcode": "Scan boat",
+            "Weight": "Place boat on scales to capture dry weight"
+        },
+        "NetlabTestType:NetlabCropType:Avocado:Fresh Weight": {
+            "Weight": "Press SPACE or ENTER to weigh fruit"
+        }
+    },
+    "lowPressureWarning": 1.25,
+    "appUrls": {},
+    "multitileDeviation": 0.2,
+    "scanIntoTestEnabled": true,
+    "showDryMatterAuditTests": false,
+    "updated_legacy_staff_type_id": "GM4",
+    "brixNoBeforeTestCalibrationMinutes": 10,
+    "showBulkWeightMenuItem": true,
+    "cutters": {
+        "NetlabTestType:NetlabCropType:Kiwifruit:Colour": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Stem and Blossom": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Double": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Equitorial": false,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Pressure Double": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Pressure": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Colour Double": true
+    },
+    "brixOutlierRecheckAttempts": 3,
+    "dryMatterApproval": false,
+    "autoStartDryIn": true,
+    "brixCheck": {
+        "NetlabVariety:Gold9": {
+            "max": 15,
+            "min": 2
+        },
+        "NetlabVariety:Wilkins": {
+            "max": 10,
+            "min": 4.2
+        },
+        "NetlabVariety:Summer Kiwi": {
+            "max": 12,
+            "min": 4
+        },
+        "NetlabVariety:Red6": {
+            "max": 23,
+            "min": 4.4
+        },
+        "NetlabVariety:Red9": {
+            "max": 23,
+            "min": 4
+        },
+        "NetlabVariety:Enza Red": {
+            "max": 12,
+            "min": 4.5
+        },
+        "NetlabVariety:Gold3": {
+            "max": 23,
+            "min": 2
+        },
+        "NetlabVariety:Green14": {
+            "max": 18,
+            "min": 2
+        },
+        "NetlabVariety:Kiwikiss": {
+            "max": 12,
+            "min": 4.5
+        },
+        "NetlabVariety:Green11": {
+            "max": 18,
+            "min": 2
+        },
+        "NetlabVariety:Gold Xtend (G1)": {
+            "min": 4
+        },
+        "NetlabVariety:ENZA Summer Kiwi": {
+            "max": 15,
+            "min": 4.5
+        },
+        "NetlabVariety:Arguta": {
+            "max": 15,
+            "min": 4
+        },
+        "NetlabVariety:Yellow8": {
+            "max": 15,
+            "min": 4
+        },
+        "NetlabVariety:Hort16A": {
+            "max": 15,
+            "min": 2
+        },
+        "NetlabVariety:Hayward": {
+            "max": 20,
+            "min": 2
+        },
+        "NetlabVariety:Enza Gold": {
+            "max": 15,
+            "min": 4.5
+        },
+        "NetlabVariety:Y356": {
+            "max": 17,
+            "min": 4.5
+        },
+        "NetlabVariety:Red19": {
+            "min": 4.5,
+            "max": 23
+        }
+    },
+    "calibrateDevice": {
+        "Penetrometer": {
+            "NetlabTestType:NetlabCropType:Avocado:Dry In": {
+                "countEnabled": false,
+                "count": null
+            }
+        },
+        "Scale": {
+            "NetlabTestType:NetlabCropType:Avocado:Dry In": {
+                "count": 5,
+                "countEnabled": false
+            },
+            "NetlabTestType:NetlabCropType:Kiwifruit:Fresh Weight": {
+                "count": 5,
+                "countEnabled": false
+            },
+            "NetlabTestType:NetlabCropType:Kiwifruit:Colour": {
+                "count": null,
+                "countEnabled": false
+            },
+            "NetlabTestType:NetlabCropType:Kiwifruit:Dry Out": {
+                "count": 5,
+                "countEnabled": true
+            },
+            "NetlabTestType:NetlabCropType:Avocado:Dry Out": {
+                "count": 5,
+                "countEnabled": true
+            }
+        },
+        "Refractometer": {
+            "NetlabTestType:NetlabCropType:Kiwifruit:Brix": {
+                "count": 15,
+                "countEnabled": true,
+                "beforeTest": true,
+                "attemptsEnabled": true,
+                "attemptsAllowed": 3
+            },
+            "NetlabTestType:NetlabCropType:Kiwifruit:Brix Double": {
+                "count": 15,
+                "countEnabled": true,
+                "attemptsAllowed": 3,
+                "attemptsEnabled": true,
+                "beforeTest": true
+            },
+            "NetlabTestType:NetlabCropType:Kiwifruit:Brix Stem and Blossom": {
+                "count": 15,
+                "countEnabled": true,
+                "attemptsAllowed": 3,
+                "attemptsEnabled": true,
+                "beforeTest": true
+            },
+            "NetlabTestType:NetlabCropType:Kiwifruit:Brix Equatorial": {
+                "count": 15,
+                "countEnabled": true,
+                "attemptsAllowed": 3,
+                "attemptsEnabled": true,
+                "beforeTest": true
+            },
+            "NetlabTestType:NetlabCropType:Kiwifruit:Brix Equitorial": {
+                "count": 15,
+                "countEnabled": true,
+                "attemptsAllowed": 3,
+                "attemptsEnabled": true,
+                "beforeTest": true
+            }
+        },
+        "Chromameter": {
+            "NetlabTestType:NetlabCropType:Kiwifruit:Colour Double": {
+                "beforeTest": true
+            },
+            "NetlabTestType:NetlabCropType:Kiwifruit:Colour": {
+                "count": 5,
+                "countEnabled": false,
+                "beforeTest": true
+            }
+        }
+    },
+    "supervisorPinFinish": {
+        "NetlabTestType:NetlabCropType:Kiwifruit:Colour": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Bulk Weight": true,
+        "NetlabTestType:NetlabCropType:Avocado:Sample Login": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Sample Login": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Equitorial": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Pressure Double": true,
+        "NetlabTestType:NetlabCropType:Avocado:Dry In": true,
+        "NetlabTestType:NetlabCropType:Avocado:Bulk Weight": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Seeds": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Double": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Dry In": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Stem and Blossom": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Equatorial": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Colour Double": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Internal Defects": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Fresh Weight": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:External Defects": true,
+        "NetlabTestType:NetlabCropType:Avocado:Dry Out": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:TA": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Pressure": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Dry Out": true,
+        "NetlabTestType:NetlabCropType:Avocado:Fresh Weight": true
+    },
+    "useDrierManagement": false,
+    "outliers": {
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Stem and Blossom": "NonParametric",
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Double": "NonParametric",
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Equitorial": "NonParametric",
+        "NetlabTestType:NetlabCropType:Avocado:Dry Out": "Parametric",
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix": "NonParametric",
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Equatorial": "NonParametric",
+        "NetlabTestType:NetlabCropType:Kiwifruit:Dry Out": "Parametric"
+    },
+    "brixPrinting": false,
+    "showLC": true,
+    "containerWeights": {
+        "NetlabContainerType:Drier Tray": {
+            "max": 500,
+            "min": 200
+        },
+        "NetlabContainerType:Tray": {
+            "max": 165,
+            "min": 25
+        },
+        "NetlabContainerType:Petri Dish": {
+            "max": 10,
+            "min": 6
+        },
+        "NetlabContainerType:Boat": {
+            "max": 6,
+            "min": 3
+        }
+    },
+    "enforceCalibrations": true,
+    "supervisorZeroCheck": {
+        "NetlabTestType:NetlabCropType:Avocado:Dry Out": true,
+        "NetlabTestType:NetlabCropType:Avocado:Dry In": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix": true
+    },
+    "supervisorPinUnlockTest": true,
+    "brixThreshold": {
+        "NetlabVariety:Gold9": null,
+        "NetlabVariety:Wilkins": 4.7,
+        "NetlabVariety:Summer Kiwi": 5.8,
+        "NetlabVariety:Hass": null,
+        "NetlabVariety:Red9": null,
+        "NetlabVariety:Enza Red": 5,
+        "NetlabVariety:Gold3": 5,
+        "NetlabVariety:Green14": 4,
+        "NetlabVariety:Kiwikiss": 5,
+        "NetlabVariety:Green11": 4,
+        "NetlabVariety:Gold Xtend (G1)": 5,
+        "NetlabVariety:ENZA Summer Kiwi": 5,
+        "NetlabVariety:Fuerte": null,
+        "NetlabVariety:Arguta": 5,
+        "NetlabVariety:Reed": null,
+        "NetlabVariety:Yellow8": 6,
+        "NetlabVariety:Hort16A": 5,
+        "NetlabVariety:Hayward": 4.7,
+        "NetlabVariety:Enza Gold": 5,
+        "NetlabVariety:Y356": 5,
+        "NetlabVariety:Red19": 5
+    },
+    "pressureTolerance": 4,
+    "$type": "NetlabLab",
+    "brixClearanceAutoFailDefault": 3,
+    "simpleLogin": true,
+    "calibrationValues": {
+        "Refractometer": {
+            "0": {
+                "range": 0.1,
+                "value": 0
+            },
+            "1": {
+                "range": 0.1,
+                "value": 6
+            }
+        },
+        "Brix": {
+            "0": {
+                "range": 0.1,
+                "value": 0
+            },
+            "1": {
+                "range": 0.1,
+                "value": 6
+            }
+        },
+        "Scale": {
+            "0": {
+                "range": 0.001,
+                "value": 0
+            },
+            "1": {
+                "range": 0.001,
+                "value": 20
+            }
+        },
+        "Chromameter": {
+            "0": {
+                "h": {
+                    "range": 50,
+                    "value": 89
+                },
+                "c": {
+                    "range": 50,
+                    "value": 2
+                },
+                "l": {
+                    "range": 50,
+                    "value": 97
+                }
+            }
+        }
+    },
+    "brixCheckDefault": {
+        "max": 15,
+        "min": 0
+    },
+    "release": {
+        "version": "0.0.1044",
+        "build": "beta"
+    },
+    "silentPrinting": true,
+    "menuItems": [
+        {
+            "id": "home",
+            "displayName": "Home",
+            "icon": "fa-home",
+            "state": "dashboard",
+            "visible": true,
+            "validation": null
+        },
+        {
+            "id": "sample_login",
+            "displayName": "Sample Login",
+            "icon": "fa-leaf",
+            "state": "sample_login_station",
+            "visible": true,
+            "validation": null
+        },
+        {
+            "id": "bulk_weight",
+            "displayName": "Bulk Weight",
+            "icon": "fa-balance-scale",
+            "state": "bulk_weight_station",
+            "visible": true,
+            "validation": {
+                "function": "Operator",
+                "item": "BulkWeight"
+            }
+        },
+        {
+            "id": "dm_approval",
+            "displayName": "DM Approval",
+            "icon": "fa-balance-scale",
+            "state": "dry_matter_approval_station",
+            "visible": true,
+            "validation": {
+                "function": "Operator",
+                "item": "DMApproval"
+            }
+        },
+        {
+            "id": "dm_audit",
+            "displayName": "DM Audit",
+            "icon": "fa-balance-scale",
+            "state": "dry_matter_audit_station",
+            "visible": true,
+            "validation": {
+                "function": "Operator",
+                "item": "DMAudit"
+            }
+        },
+        {
+            "id": "containers",
+            "displayName": "Containers",
+            "icon": "fa-cubes",
+            "state": "container_manager",
+            "visible": true,
+            "validation": {
+                "function": "Operator",
+                "item": "ContainerManager"
+            }
+        },
+        {
+            "id": "cutter_action",
+            "displayName": "Cut Station",
+            "icon": "fa-scissors",
+            "state": "cuttersview",
+            "visible": true,
+            "validation": null
+        },
+        {
+            "id": "sample_batch",
+            "displayName": "Sample Batch",
+            "icon": "fa-archive",
+            "state": "batch_station",
+            "visible": true,
+            "validation": {
+                "function": "Operator",
+                "item": "SampleBatch"
+            }
+        },
+        {
+            "id": "ecpi",
+            "displayName": "ECPI",
+            "icon": "fa-anchor",
+            "state": "ecpi",
+            "visible": false,
+            "validation": null
+        },
+        {
+            "id": "ships",
+            "displayName": "Ships",
+            "icon": "fa-ship",
+            "state": "ships",
+            "visible": false,
+            "validation": null
+        },
+        {
+            "id": "sample_info",
+            "displayName": "Samples Info",
+            "icon": "fa-bar-chart",
+            "state": "samplesInLab",
+            "visible": true,
+            "validation": {
+                "function": "Report",
+                "item": "IncompleteTests"
+            }
+        },
+        {
+            "id": "samples_in_lab",
+            "displayName": "Samples in Lab",
+            "icon": "fa-bar-chart",
+            "state": "incompleteTests",
+            "visible": true,
+            "validation": null
+        },
+        {
+            "id": "qc_breaches",
+            "displayName": "QC Breaches",
+            "icon": "fa-exclamation-triangle ",
+            "state": "qcBreaches",
+            "visible": true,
+            "validation": null
+        },
+        {
+            "id": "incomplete_tests_kiwifruit",
+            "displayName": "KW Incomplete Tests",
+            "icon": "fa-bar-chart",
+            "state": null,
+            "visible": true,
+            "validation": null,
+            "function": "openIncompleteSamplesReportKiwifruit"
+        },
+        {
+            "id": "incomplete_tests_avocado",
+            "displayName": "Avo Incomplete Tests",
+            "icon": "fa-bar-chart",
+            "state": null,
+            "visible": true,
+            "validation": null,
+            "function": "openIncompleteSamplesReportAvocado"
+        },
+        {
+            "id": "sample_collection",
+            "displayName": "Sample Collection",
+            "icon": "fa-bar-chart",
+            "state": null,
+            "visible": true,
+            "validation": null,
+            "function": "openSampleCollection"
+        },
+        {
+            "id": "sample_results",
+            "displayName": "Sample Results",
+            "icon": "fa-bar-chart",
+            "state": null,
+            "visible": false,
+            "validation": null,
+            "function": "openSampleResults"
+        },
+        {
+            "id": "hardware",
+            "displayName": "Hardware",
+            "icon": "fa-balance-scale",
+            "state": "hardware_setup",
+            "visible": true,
+            "validation": {
+                "function": "Operator",
+                "item": "Hardware"
+            }
+        },
+        {
+            "id": "configuration",
+            "displayName": "Configuration",
+            "icon": "fa-key",
+            "state": "configuration",
+            "visible": true,
+            "validation": {
+                "function": "Operator",
+                "item": "Configuration"
+            }
+        },
+        {
+            "id": "user_manager",
+            "displayName": "User Manager",
+            "icon": "fa-user",
+            "state": null,
+            "visible": true,
+            "validation": null,
+            "function": "openUserManager"
+        },
+        {
+            "id": "control_panel",
+            "displayName": "Control Panel",
+            "icon": "fa-user",
+            "state": null,
+            "visible": true,
+            "validation": null,
+            "function": "openControlPanel"
+        },
+        {
+            "id": "validations",
+            "displayName": "Validations",
+            "icon": "fa-calendar-check-o",
+            "state": "validations_edit",
+            "visible": true,
+            "validation": {
+                "function": "Operator",
+                "item": "Validations"
+            }
+        },
+        {
+            "id": "help",
+            "displayName": "Help",
+            "icon": "fa-question",
+            "state": null,
+            "visible": true,
+            "validation": null,
+            "function": "openAgfHelp"
+        },
+        {
+            "id": "setup",
+            "displayName": "Setup",
+            "icon": "fa-cogs",
+            "state": "workstation_setup",
+            "visible": true,
+            "validation": {
+                "function": "Operator",
+                "item": "Setup"
+            }
+        },
+        {
+            "id": "support",
+            "displayName": "Support",
+            "icon": "fa-info",
+            "state": "support",
+            "visible": false,
+            "validation": null
+        }
+    ],
+    "createdBy": "25",
+    "drierTrays": true,
+    "fourTrayFruitAvgWeight": 140,
+    "smallFruitWeights": {
+        "NetlabVariety:Hass": {
+            "enabled": true,
+            "weight": 74
+        },
+        "NetlabVariety:Gold3": {
+            "enabled": true,
+            "weight": 74
+        },
+        "NetlabVariety:Green14": {
+            "enabled": true,
+            "weight": 74
+        },
+        "NetlabVariety:Fuerte": {
+            "enabled": true,
+            "weight": 74
+        },
+        "NetlabVariety:Reed": {
+            "enabled": true,
+            "weight": 74
+        },
+        "NetlabVariety:Hort16A": {
+            "enabled": true,
+            "weight": 74
+        },
+        "NetlabVariety:Hayward": {
+            "enabled": true,
+            "weight": 74
+        }
+    },
+    "auditWeightKiwifruitDryDown": 1,
+    "outlierTolerances": {
+        "NetlabTestType:NetlabCropType:Avocado:Dry Out": {
+            "max": 0.02,
+            "min": -0.02
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Stem and Blossom": {
+            "max": 0.3,
+            "min": -0.1
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Dry Out": {
+            "max": 0.02,
+            "min": -0.02
+        },
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Equatorial": {
+            "max": 0.3,
+            "min": -0.1
+        }
+    },
+    "calibrationDeviceType": {
+        "Scale": true,
+        "CR300ChromameterChromameter:CR300": true,
+        "ANDScaleScale:AND": true,
+        "Colour": false,
+        "Penetrometer": true,
+        "Refractometer": true,
+        "Chromameter": true,
+        "CR400ChromameterChromameter:CR400": true
+    },
+    "supervisorPinCalibrateLogin": true,
+    "brixThresholdDefault": null,
+    "zeroRanges": {
+        "Brix": {
+            "max": 1.2,
+            "min": 0.1
+        },
+        "Scale": {
+            "max": 0.0003,
+            "min": 0.0002
+        }
+    },
+    "brixClearanceAutoFail": {
+        "NetlabVariety:Gold9": 3,
+        "NetlabVariety:Wilkins": 3,
+        "NetlabVariety:Summer Kiwi": 3,
+        "NetlabVariety:Hass": 3,
+        "NetlabVariety:Red6": 3,
+        "NetlabVariety:Red9": 3,
+        "NetlabVariety:Enza Red": 3,
+        "NetlabVariety:Gold3": 3,
+        "NetlabVariety:Green14": 3,
+        "NetlabVariety:Kiwikiss": 3,
+        "NetlabVariety:Green11": 3,
+        "NetlabVariety:Gold Xtend (G1)": 3,
+        "NetlabVariety:ENZA Summer Kiwi": 3,
+        "NetlabVariety:Fuerte": 3,
+        "NetlabVariety:Arguta": 3,
+        "NetlabVariety:Reed": 3,
+        "NetlabVariety:Yellow8": 3,
+        "NetlabVariety:Hort16A": 3,
+        "NetlabVariety:Hayward": 3,
+        "NetlabVariety:Enza Gold": 3,
+        "NetlabVariety:Y356": 3,
+        "NetlabVariety:Red19": 3
+    },
+    "calibrationTypeDuration": {
+        "Chromameter:CR300": 24,
+        "Scale:AND": 24,
+        "Scale": 22,
+        "Colour": 0,
+        "Caliper": 0,
+        "Chromameter:CR400": 24,
+        "Refractometer": 0,
+        "Chromameter": 4,
+        "Penetrometer": 168,
+        "Penetrometer:WEL": 24,
+        "Colour:Stick": 24,
+        "Brix:TODO": 24,
+        "Caliper:WEL": 24
+    },
+    "showSampleBatchMenuItem": true,
+    "showECPI": false,
+    "colourTolerance": 50,
+    "calibrationWarning": {
+        "Penetrometer": 120,
+        "Scale": 0.2,
+        "Colour": 0.2,
+        "Chromameter": 30
+    },
+    "calibrationExpireDaily": {
+        "Scale": false,
+        "Refractometer": true
+    },
+    "created": "2015-09-11T03:46:29.939Z",
+    "autoFreshWeight": false,
+    "calibrationAttempt": {
+        "Refractometer": 3,
+        "Chromameter": 3
+    },
+    "workstation": { },
+    "supervisorRequiredToEditTests": true,
+    "showChangingSeeds": true,
+    "auditWeightDryInTolerance": 2000,
+    "auditWeightDryOutTolerance": 2000,
+    "disableSupervisorPins": false,
+    "enforceStrictMeasures": {
+        "NetlabTestType:NetlabCropType:Kiwifruit:Brix Equatorial": true,
+        "NetlabTestType:NetlabCropType:Kiwifruit:Fresh Weight": true
+    }
+
+}

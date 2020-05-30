@@ -1,0 +1,25 @@
+.centered-dashboard-button {
+    display: block !important;
+    width: 50% !important;
+    height:50px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top:40px !important;
+    margin-bottom:40px !important;
+}
+.site-red {
+    background: #800000;
+}
+.site-green {
+    background: #33cc33;
+}
+.site-yellow {
+    background: #ffff66;
+}
+.site-grey {
+    background:#bfbfbf;
+}
+.site-inputcheckbox{
+    width: 20px;
+    height:20px;
+}

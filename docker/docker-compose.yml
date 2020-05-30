@@ -1,0 +1,86 @@
+version: '3'
+
+services:
+
+  # The Application
+  app:
+    build:
+      context: ./
+      dockerfile: app.dockerfile
+    working_dir: /var/www/netlab-appliance
+    volumes:
+      - ../:/var/www/netlab-appliance
+    links:
+      - database_appliance 
+
+  # The Web Server
+  web:
+    build:
+      context: ./
+      dockerfile: web.dockerfile
+    working_dir: /var/www/netlab-appliance
+    #volumes_from:
+    #  - app
+    ports:
+      - 9000:80
+    links:
+      - database_appliance  
+
+  # The Database
+  # we could share it between project if we would use the same name and same volumes. but it would not create the MYSQL_USER. so it is better to create a complete different mysql instance
+  database_appliance:
+    image: mysql:5.6
+    volumes:
+      - dbdata:/var/lib/mysql_appliance
+    environment:
+      - "MYSQL_DATABASE=netlab_appliance"
+      - "MYSQL_USER=netlab_appliance"
+      - "MYSQL_PASSWORD=netlab_appliance"
+      - "MYSQL_ROOT_PASSWORD=root"
+    ports:
+        - "33061:3306"
+
+  couchdb:
+    image: couchdb:2
+    environment:
+      - "COUCHDB_USER=couchdb_user"
+      - "COUCHDB_PASSWORD=couchdb_user"
+    ports:
+      - "5984:5984"
+  
+  fauxton:
+    image: 3apaxicom/fauxton
+    ports:
+      - 8000:8000
+    links:
+      - couchdb:db
+    command:
+      - sh
+      - "-c"
+      - "fauxton -c http://couchdb:5984"  
+
+  mq:
+    image: rabbitmq:3
+    ports:
+        - "5672"
+    environment:
+        - "RABBITMQ_DEFAULT_PASS=rabbituser"
+        - "RABBITMQ_DEFAULT_USER=rabbithostr"
+        - "RABBITMQ_DEFAULT_VHOST='vhost'"
+
+
+  ### phpMyAdmin ###########################################
+  phpmyadmin:
+    build: ./phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - MYSQL_USER=netlab_appliance
+      - MYSQL_PASSWORD=netlab_appliance
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "8001:80"
+    depends_on:
+      - database_appliance
+
+volumes:
+  dbdata:
